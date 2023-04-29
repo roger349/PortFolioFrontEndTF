@@ -1,0 +1,15 @@
+<div class="row">
+   <h1>Experiencia Laboral</h1>
+   <div class="col-1" style="padding-left:2%">
+   <img src="../../../assets/team.jpg">
+   </div>
+   <div class="col-11">
+    <div *ngFor="let exp of exper">
+      <br> 
+      <h1>Empresa: {{exp.nombre_empresa}}, Fecha Inicio: {{exp.fecha_inicio}}, Fecha Fin: {{exp.fecha_fin}}, 
+        Descripcion Puesto: {{exp.descripcion_puesto}}</h1>
+      </div>    
+   </div>
+</div>
+
+
