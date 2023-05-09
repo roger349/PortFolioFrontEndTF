@@ -8,12 +8,20 @@ import { ExperienciaLaboral } from '../modelos/ExperienciaLaboral.model';
 })
 export class ExperienciaLaboralServService {
 
-  URL= "http://localhost:8080/experiencia/verdatosExp"; 
+  url= "http://localhost:8080/experiencia"; 
   
   constructor(private http : HttpClient) { }
   
   public ExpList(): Observable<ExperienciaLaboral[]>{
-    return this.http.get<ExperienciaLaboral[]>(this.URL);         
+    return this.http.get<ExperienciaLaboral[]>(this.url+'/verdatosExp');         
   }
-
+  public agregarExt(experiencia: ExperienciaLaboral): Observable<any>{
+    return this.http.post<any>(this.url + '/agregardatosExp', experiencia);
+  }
+  public updateExp(id: number, experiencia: ExperienciaLaboral): Observable<any>{
+    return this.http.put<any>(this.url + `/updatedatosExp/${id}`, experiencia);
+  }
+  public deleteExp(id: number): Observable<any>{
+    return this.http.delete<any>(this.url + `/deletedatosExp/${id}`);
+  }
 }

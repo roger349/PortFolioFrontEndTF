@@ -1,4 +1,5 @@
 export class UserLogin {
+    id_user_login!: number;
     nombre_usuario:string;
     password_usuario:string;
 

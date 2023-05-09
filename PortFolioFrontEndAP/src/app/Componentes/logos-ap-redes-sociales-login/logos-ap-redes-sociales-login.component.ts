@@ -7,11 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./logos-ap-redes-sociales-login.component.css']
 })
 export class LogosApRedesSocialesLoginComponent implements OnInit  {
+  loginUserOn:Boolean=false;
+
     constructor(private router:Router) {}
   
     ngOnInit(): void {
     }
-  
+    
   loginuser(){
     this.router.navigate(["/loginuser"])
   }

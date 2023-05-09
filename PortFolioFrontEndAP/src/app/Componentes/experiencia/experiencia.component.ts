@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ExperienciaLaboral } from 'src/app/modelos/ExperienciaLaboral.model';
 import { ExperienciaLaboralServService } from 'src/app/servicios/ExperienciaLaboralServ.service';
 

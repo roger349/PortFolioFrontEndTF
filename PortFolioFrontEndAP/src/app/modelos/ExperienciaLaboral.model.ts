@@ -1,14 +1,14 @@
 export class ExperienciaLaboral {
 
     id_experiencia?:number;
-    nombre_empresa: String;
-    fecha_inicio:String;
-    fecha_fin:String;
-    descripcion_puesto: String;
+    nombre_empresa: string;
+    fecha_inicio:string;
+    fecha_fin:string;
+    descripcion_puesto: string;
   
 
-    constructor(id_experiencia:number, nombre_empresa:String, fecha_inicio:String, fecha_fin: String, 
-                descripcion_puesto:String) {
+    constructor(id_experiencia:number, nombre_empresa:string, fecha_inicio:string, fecha_fin: string, 
+                descripcion_puesto:string) {
 
     this.id_experiencia = id_experiencia; 
     this.nombre_empresa = nombre_empresa;

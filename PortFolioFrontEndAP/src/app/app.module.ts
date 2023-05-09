@@ -14,11 +14,19 @@ import { HomeComponent } from './Componentes/home/home.component';
 import { LogosApRedesSocialesLoginComponent } from './Componentes/logos-ap-redes-sociales-login/logos-ap-redes-sociales-login.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
-import { EdicionHsskillsComponent } from './Componentes/hsskills/edicion-hsskills.component';
-import { NuevoHsskillsComponent } from './Componentes/hsskills/nuevo-hsskills.component'
 import { FooterComponent } from './Componentes/footer/footer.component';
- 
-@NgModule({
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AgregarExpComponent } from './Componentes/experiencia/agregar-exp.component';
+import { ActualizarExpComponent } from './Componentes/experiencia/actualizar-exp.component';
+import { EliminarExpComponent } from './Componentes/experiencia/eliminar-exp.component'
+import { ActualizarHsskillsComponent } from './Componentes/hsskills/actualizar-hsskills.component';
+import { AgregarHsskillsComponent } from './Componentes/hsskills/agregar-hsskills.component';
+import { AgregarProyectosComponent } from './Componentes/proyectos/agregar-proyectos.component';
+import { ActualizarProyectosComponent } from './Componentes/proyectos/actualizar-proyectos.component';
+import { ActualizarEducacionComponent } from './Componentes/educacion/actualizar-educacion.component';
+import { AgregarEducacionComponent } from './Componentes/educacion/agregar-educacion.component';
+
+ @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -32,15 +40,24 @@ import { FooterComponent } from './Componentes/footer/footer.component';
     HomeComponent,
     LogosApRedesSocialesLoginComponent,
     FooterComponent,
-    EdicionHsskillsComponent,
-    NuevoHsskillsComponent
+    AgregarExpComponent,
+    ActualizarExpComponent,
+    EliminarExpComponent,
+    ActualizarHsskillsComponent,
+    AgregarHsskillsComponent,
+    AgregarProyectosComponent,
+    ActualizarProyectosComponent,
+    ActualizarEducacionComponent,
+    AgregarEducacionComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

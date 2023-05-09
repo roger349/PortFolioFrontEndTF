@@ -1,19 +1,18 @@
-.login {
+.agregarProy {
     margin-top:200px;
     margin-bottom: 200px;
     margin-left: 500px;
-}
-div {
+  }
+  div {
     background: blue;  
     text-align: center;
     width: 350px;
     border-radius: 2%;
     color:whitesmoke;
     padding-top:15px;  
-}
- div form div input {
+  }
+  div form div input {
     width: 310px;
     margin-right: 20px;
     margin-left: 20px;
-}
-
+  }
