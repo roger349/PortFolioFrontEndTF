@@ -18,7 +18,7 @@ export class ExperienciaLaboralServService {
   public agregarExt(experiencia: ExperienciaLaboral): Observable<any>{
     return this.http.post<any>(this.url + '/agregardatosExp', experiencia);
   }
-  public updateExp(id: number, experiencia: ExperienciaLaboral): Observable<any>{
+  public actualizarExp(id: number, experiencia: ExperienciaLaboral): Observable<any>{
     return this.http.put<any>(this.url + `/updatedatosExp/${id}`, experiencia);
   }
   public deleteExp(id: number): Observable<any>{

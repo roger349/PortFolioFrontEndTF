@@ -25,6 +25,7 @@ import { AgregarProyectosComponent } from './Componentes/proyectos/agregar-proye
 import { ActualizarProyectosComponent } from './Componentes/proyectos/actualizar-proyectos.component';
 import { ActualizarEducacionComponent } from './Componentes/educacion/actualizar-educacion.component';
 import { AgregarEducacionComponent } from './Componentes/educacion/agregar-educacion.component';
+import { EliminarProyectosComponent } from './Componentes/proyectos/eliminar-proyectos.component';
 
  @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AgregarEducacionComponent } from './Componentes/educacion/agregar-educa
     AgregarProyectosComponent,
     ActualizarProyectosComponent,
     ActualizarEducacionComponent,
-    AgregarEducacionComponent
+    AgregarEducacionComponent,
+    EliminarProyectosComponent
   ],
 
   imports: [

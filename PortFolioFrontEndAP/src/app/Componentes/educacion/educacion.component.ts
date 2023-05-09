@@ -20,4 +20,7 @@ export class EducacionComponent implements OnInit {
   console.log(edu);} )
   this.loginServ.Listuserlogin().subscribe( data1 => {this.DatosUserLogin = data1})         
   }
+  public visualizarBotones():boolean {
+    return this.loginServ.Habilitarlogueo();
+ }
 }
