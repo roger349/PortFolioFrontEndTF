@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DatosPersonales } from 'src/app/modelos/DatosPersonales.model';
 import { UserLogin } from 'src/app/modelos/UserLogin.model';
 import { DatosPersonalesServService } from 'src/app/servicios/DatosPersonalesServ.service';
@@ -14,7 +15,7 @@ export class AcercadeComponent implements OnInit{
 
  DatosPer: DatosPersonales[]=[];
  
-  constructor(public DPServ: DatosPersonalesServService, private loginServ: LoginService) {}
+  constructor(private router:Router, private DPServ: DatosPersonalesServService, private loginServ: LoginService) {}
 
   ngOnInit(): void {
   this.DPServ.DatPer().subscribe( data => {this.DatosPer = data});
@@ -23,4 +24,5 @@ export class AcercadeComponent implements OnInit{
   public visualizarBotones():boolean {
      return this.loginServ.Habilitarlogueo();
   }
+  
 }

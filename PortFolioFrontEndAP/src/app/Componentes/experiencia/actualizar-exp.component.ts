@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actualizar-exp',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActualizarExpComponent implements OnInit {
 
-  constructor() { }
+constructor(private router:Router ) { }
 
-  ngOnInit(): void {
-  }
-
+ngOnInit(): void {
+}
+public regresarPrincipal() {
+  this.router.navigate(['']);
+} 
 }

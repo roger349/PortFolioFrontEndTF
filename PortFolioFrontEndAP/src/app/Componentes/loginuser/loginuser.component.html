@@ -1,16 +1,16 @@
 <div class="form-group login">
-  <form [formGroup]="loginform" (ngSubmit)="enviarFormulario()" (ngSubmit)="volverPrincipal()">
+  <form [formGroup]="loginform">
       <div>
       <label class="form-label" for="formUsuario">Ingrese usuario</label>
-      <input formControlName="usuario"  [class.is-invalid]="cont.usuario.errors && cont.usuario.touched" 
+      <input  
              type="usuario" id="formUsuario" class="form-control" placeholder="usuario"/>
       </div>
       <div>
       <label class="form-label" for="formpassword">Ingrese Password</label>
-      <input formControlName="password"  [class.is-invalid]="cont.usuario && cont.password.touched"
+      <input formControlName="password"
       type="password" id="formpassword" class="form-control" placeholder="password"/>
       </div>
       <br>
-      <button type="submit" class="btn btn-success btn-block mb-4">Ingresar</button>
+      <button type="submit" class="btn btn-success btn-block mb-4"(click)="volverPrincipal()">Ingresar</button>
   </form>
 </div>  

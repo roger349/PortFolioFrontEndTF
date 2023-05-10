@@ -20,11 +20,13 @@ public Listuserlogin(): Observable<UserLogin[]>{
 }
 public MostrarBotones({ obj }: { obj: any; }):boolean{
   this.ingresar = obj.usuario == 'roger' && obj.password=='1234';
-  return this.ingresar; 
+  return this.ingresar;
+}  
+public logaut() {
+  this.router.navigate(['']);
+  return 
 } 
 public Habilitarlogueo():boolean{
   return this.ingresar 
-  } 
-
-} 
-
+ } 
+}

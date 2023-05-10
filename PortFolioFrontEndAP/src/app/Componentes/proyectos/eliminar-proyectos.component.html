@@ -1,20 +1,9 @@
-<div class="eliminarProy container">
-    <form>
-        <div class="formg-group">
-            <label class="form-label" for="Agregarexp">Id del Proyecto</label>
-            <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" />
-            </div>
-            <br>
-            <div class="formg-group">
-            <label class="form-label" for="Agregarexp">Tipo de Proyecto</label>
-            <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" />
-            </div>
-            <br>
-            <div class="form-group">
-            <label class="form-label" for="fechaInicio">descripcion Breve del proyecto</label>
-            <input formControlName="fechai" type="fechai" id="fechaInicio" class="form-control"/>
-            </div>
-            <br>   
-        <button type="submit" class="btn btn-success btn-block mb-4" >Eliminar</button>
-    </form>
+><div class="container eliminarproy">
+    <div>
+     <label for="EliminarProy">Ingrese el Id del Proyecto a Eliminar</label>
+     <input formControlName="proyET" type="proyET" id="EliminarProy" class="form-control" required/>
+     </div>
+     <div>
+     <br>    
+     <button type="submit" class="btn btn-success"(click)="regresarPrincipal()">Eliminar</button>
 </div> 

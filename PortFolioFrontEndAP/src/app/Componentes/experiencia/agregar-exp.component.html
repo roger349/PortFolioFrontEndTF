@@ -1,24 +1,20 @@
 <div class="container AgregarExp">
-    <form>
-        <div class="formg-group">
-        <label class="form-label" for="Agregarexp">Nombre Empresa</label>
-        <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" />
+        <div>
+            <label for="Agregarexp">Nombre Empresa</label>
+            <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" />
         </div>
-        <div class="form-group">
-        <label class="form-label" for="fechaInicio">Fecha de Inicio</label>
-        <input formControlName="fechai" type="fechai" id="fechaInicio" class="form-control"/>
+        <div>
+            <label for="fechaInicio">Fecha de Inicio</label>
+            <input formControlName="fechai" type="fechai" id="fechaInicio" class="form-control"/>
         </div>
-        <br>
-        <div class="form-group">
-            <label class="form-label" for="fechaFin">Fecha de Fin</label>
+        <div>
+            <label for="fechaFin">Fecha de Fin</label>
             <input formControlName="fechaf" type="fechaf" id="fechaFin" class="form-control"/>
-            </div>
-            <br>
-        <div class="form-group">
-            <label class="form-label" for="descripPuesto">Descripcion Breve del Puesto</label>
-            <input formControlName="descripP" type="descripP" id="descripPuesto"/>
-            </div>
-            <br>    
-        <button type="submit" class="btn btn-success btn-block mb-4">Agregar</button>
-    </form>
-  </div>  
+        </div>
+        <div>
+            <label for="descripPuesto">Descripcion Breve del Puesto</label>
+            <input formControlName="descripP" type="descripP" id="descripPuesto" class="form-control"/>
+        </div>
+        <br>    
+        <button type="submit" class="btn btn-success"(click)="regresarPrincipal()">Agregar</button>
+</div>  

@@ -1,18 +1,16 @@
 .AgregarExp {
-    margin-top:200px;
-    margin-bottom: 200px;
-    margin-left: 500px;
-}
-div {
+    margin-top:100px;
+    margin-bottom: 100px;
     background: blue;  
     text-align: center;
-    width: 350px;
-    border-radius: 2%;
+    width: 380px;
     color:whitesmoke;
-    padding-top:15px;  
+    padding-top:25px;
+    padding-bottom: 25px;  
 }
- div form div input {
+ div div input {
     width: 310px;
     margin-right: 20px;
     margin-left: 20px;
-}
+    border-radius: 2%;
+} 

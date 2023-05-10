@@ -14,13 +14,13 @@
      <br>
      <div class="row m-1" *ngIf="visualizarBotones()">
          <div class="col-1">
-         <button type="submit" class="btn btn-primary">Agregar</button>
+         <button type="submit" class="btn btn-primary"(click)="botonAgregar()">Agregar</button>
          </div>
          <div class="col-1">
-         <button type="submit" class="btn btn-info">Eliminar</button>
+         <button type="submit" class="btn btn-info"(click)="botonEliminar()">Eliminar</button>
          </div>
          <div class="col-1">
-         <button type="submit" class="btn btn-primary">Actualizar</button>
+         <button type="submit" class="btn btn-primary"(click)="botonActualizar()">Actualizar</button>
          </div>
      </div>
 </div>

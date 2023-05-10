@@ -16,16 +16,22 @@ export class ExperienciaComponent implements OnInit {
   
   constructor(private router:Router ,private ELServ : ExperienciaLaboralServService, private loginServ:LoginService) {};
   
-  ngOnInit(): void {
-    this.ELServ.ExpList().subscribe(exp => { this.exper=exp;
+ngOnInit(): void {
+  this.ELServ.ExpList().subscribe(exp => { this.exper=exp;
       console.log(exp);} )  
-  }
-  public visualizarBotones():boolean {
+}
+public visualizarBotones():boolean {
     return this.loginServ.Habilitarlogueo();
- }
-  public botonAgregar() {
+}
+public botonAgregar() {
      this.router.navigate(['agregarExp']);
- }
+}
+public botonEliminar() {
+  this.router.navigate(['eliminarExp/:id']);
+}
+public botonActualizar() {
+  this.router.navigate(['actualizarExp/:id']);
+}
 }
 
 

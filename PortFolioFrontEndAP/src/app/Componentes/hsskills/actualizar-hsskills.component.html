@@ -1,20 +1,16 @@
-<div class="actualizarhys container">
-    <form>
-        <div class="formg-group">
-            <label class="form-label" for="Agregarexp">Id de Tecnologia</label>
-            <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" />
-            </div>
-            <br>
-            <div class="formg-group">
-            <label class="form-label" for="Agregarexp">Nombre Tecnologia</label>
-            <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" />
-            </div>
-            <br>
-            <div class="form-group">
-            <label class="form-label" for="fechaInicio">Porsentaje Tecnologia</label>
-            <input formControlName="fechai" type="fechai" id="fechaInicio" class="form-control"/>
-            </div>
-            <br>   
-        <button type="submit" class="btn btn-success btn-block mb-4">Actualizar</button>
-    </form>
+<div class="container actualizarhys">
+    <div>
+        <label for="ActualizarTec">Id Tecnologia</label>
+        <input formControlName="TecI" type="TecI" id="ActualizarTec" class="form-control" required/>
+    </div>
+    <div>
+        <label for="ActualizarN">Nombre Tecnologia</label>
+        <input formControlName="TeN" type="TecN" id="ActualizarN" class="form-control"/>
+    </div>
+    <div>
+        <label for="PorcentajeTec">Porcentaje Tecnologia</label>
+        <input formControlName="TecP" type="TecP" id="PorcentajeTec" class="form-control"/>
+    </div>
+    <br>    
+    <button type="submit" class="btn btn-success"(click)="regresarPrincipal()">Actualizar</button>
 </div> 

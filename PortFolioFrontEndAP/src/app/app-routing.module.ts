@@ -18,13 +18,13 @@ const routes: Routes = [
   {path: 'loginuser', component: LoginuserComponent},
   { path: 'agregarExp', component: AgregarExpComponent},
   { path: 'eliminarExp/:id', component: EliminarExpComponent},
-  { path: 'actualizarExp', component: ActualizarExpComponent},
+  { path: 'actualizarExp/:id', component: ActualizarExpComponent},
   { path: 'agregarEdu', component: AgregarEducacionComponent},
-  { path: 'actualizarEdu', component: ActualizarEducacionComponent},
+  { path: 'actualizarEdu/:id', component: ActualizarEducacionComponent},
   { path: 'agregarhys', component: AgregarHsskillsComponent},
-  { path: 'actualizarhys', component: ActualizarHsskillsComponent},
+  { path: 'actualizarhys/:id', component: ActualizarHsskillsComponent},
   { path: 'agregarProy', component: AgregarProyectosComponent},
-  { path: 'actualizarProy', component: ActualizarProyectosComponent},
+  { path: 'actualizarProy/:id', component: ActualizarProyectosComponent},
   { path: 'eliminarProy/:id', component: EliminarProyectosComponent}
 ];
 

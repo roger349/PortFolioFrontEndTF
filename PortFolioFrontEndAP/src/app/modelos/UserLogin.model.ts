@@ -1,12 +1,6 @@
-export class UserLogin {
-    id_user_login!: number;
-    nombre_usuario:string;
+export interface UserLogin {
+
+    nombre_usuario:  string;
     password_usuario:string;
 
-    constructor(nombre_usuario:string, password_usuario:string) {
-
-        this.nombre_usuario = nombre_usuario;
-        this.password_usuario = password_usuario; 
-          
-    }
 }

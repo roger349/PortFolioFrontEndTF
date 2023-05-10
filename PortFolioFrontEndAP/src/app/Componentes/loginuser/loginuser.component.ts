@@ -40,7 +40,7 @@ ngOnInit(): void  {
     }
     public get cont():any {
      return this.loginform.controls;
-    }
+    } 
     volverPrincipal() {
       this.router.navigate(['']);
     } 
