@@ -12,26 +12,23 @@ import { LoginService } from 'src/app/servicios/login.services';
 })
 export class ExperienciaComponent implements OnInit {
 
-  exper: ExperienciaLaboral[] = [];
+exper: ExperienciaLaboral[] = [];
+mostrar:boolean=false;
   
-  constructor(private router:Router ,private ELServ : ExperienciaLaboralServService, private loginServ:LoginService) {};
+constructor(private router:Router ,private ELServ : ExperienciaLaboralServService, private loginServ:LoginService) {};
   
 ngOnInit(): void {
   this.ELServ.ExpList().subscribe(exp => { this.exper=exp;
       console.log(exp);} )  
 }
-public visualizarBotones():boolean {
-    return this.loginServ.Habilitarlogueo();
-}
-public botonAgregar() {
+public botonEdiccion() {
      this.router.navigate(['agregarExp']);
 }
 public botonEliminar() {
   this.router.navigate(['eliminarExp/:id']);
 }
-public botonActualizar() {
-  this.router.navigate(['actualizarExp/:id']);
-}
-}
+mostrarB() {
+  return this.loginServ.habilitarBotones();  
+ }
 
-
+}

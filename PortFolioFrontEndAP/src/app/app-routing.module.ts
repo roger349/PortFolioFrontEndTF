@@ -15,6 +15,7 @@ import { EliminarProyectosComponent } from './Componentes/proyectos/eliminar-pro
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path:'home', component:HomeComponent },
   {path: 'loginuser', component: LoginuserComponent},
   { path: 'agregarExp', component: AgregarExpComponent},
   { path: 'eliminarExp/:id', component: EliminarExpComponent},

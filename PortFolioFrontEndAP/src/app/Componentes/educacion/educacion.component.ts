@@ -4,6 +4,7 @@ import { EducacionService } from '../../servicios/Educacion.service'
 import { UserLogin } from 'src/app/modelos/UserLogin.model';
 import { LoginService } from 'src/app/servicios/login.services';
 import { Router } from '@angular/router';
+import { LoginuserComponent } from '../loginuser/loginuser.component';
 
 @Component({
   selector: 'app-educacion',
@@ -13,21 +14,20 @@ import { Router } from '@angular/router';
 export class EducacionComponent implements OnInit {
   
   educ: Educacion[] = [];
-  DatosUserLogin: UserLogin[]=[];
+  mostrar:boolean=false;
   constructor(private router: Router, private eduservice : EducacionService, private loginServ: LoginService) {}
   
   ngOnInit(): void {
   this.eduservice.EduList().subscribe(edu => { this.educ=edu;
-  console.log(edu);} )
-  this.loginServ.Listuserlogin().subscribe( data1 => {this.DatosUserLogin = data1})         
+  console.log(edu);} )        
   }
-public visualizarBotones():boolean {
-    return this.loginServ.Habilitarlogueo();
- }
-public botonAgregar() {
+public botonEdiccion() {
   this.router.navigate(['agregarEdu']);
 }
-public botonActualizar() {
+public botonEliminar() {
 this.router.navigate(['actualizarEdu/:id']);
-} 
+}
+mostrarB() {
+ return this.loginServ.habilitarBotones();  
+}
 }

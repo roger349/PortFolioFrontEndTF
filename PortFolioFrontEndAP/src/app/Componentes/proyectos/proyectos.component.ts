@@ -11,16 +11,15 @@ import { LoginService } from 'src/app/servicios/login.services';
 })
 export class ProyectosComponent implements OnInit {
 
-  proy: Proyectos[]=[];
+proy: Proyectos[]=[];
+mostrar:boolean=false;
   
 constructor(private router: Router, public ProyServ:ProyectosService,private loginServ: LoginService) {};
 
 ngOnInit(): void {
     this.ProyServ.ProList().subscribe(pro=>{this.proy=pro});
   }
-public visualizarBotones():boolean {
-    return this.loginServ.Habilitarlogueo();
- }
+  
 public botonAgregar() {
   this.router.navigate(['agregarProy']);
 }
@@ -29,5 +28,8 @@ public botonEliminar() {
 }
 public botonActualizar() {
   this.router.navigate(['actualizarProy/:id']);
+}
+mostrarB() {
+  return this.loginServ.habilitarBotones();  
  }
 }

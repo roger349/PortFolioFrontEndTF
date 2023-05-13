@@ -8,25 +8,18 @@ import { UserLogin } from '../modelos/UserLogin.model';
   providedIn: 'root'
 })
 export class LoginService {
+logget!:boolean;  
+DLogin: UserLogin = new UserLogin()
+/*private url= "http://localhost:8080/userLogin/verdatosUserLogin";*/
+private url1= "http://localhost:8080/userLogin/login";
 
-url= "http://localhost:8080/userLogin/verdatosUserLogin";
-
-private ingresar:boolean=false;
-  
 constructor(private router:Router, private http:HttpClient) {}
 
-public Listuserlogin(): Observable<UserLogin[]>{
-  return this.http.get<UserLogin[]>(this.url);
-}
-public MostrarBotones({ obj }: { obj: any; }):boolean{
-  this.ingresar = obj.usuario == 'roger' && obj.password=='1234';
-  return this.ingresar;
-}  
-public logaut() {
-  this.router.navigate(['']);
-  return 
+loginUser(userLogin:UserLogin ) : Observable<object> { 
+  return this.http.post(this.url1, userLogin);    
+  }
+  
+public habilitarBotones():boolean {
+  return this.logget
 } 
-public Habilitarlogueo():boolean{
-  return this.ingresar 
- } 
-}
+}             

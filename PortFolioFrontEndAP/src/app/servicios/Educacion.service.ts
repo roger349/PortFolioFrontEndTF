@@ -7,7 +7,7 @@ import { Educacion } from '../modelos/Educacion.model';
   providedIn: 'root'
 })
 export class EducacionService {
-  
+  mostar!:boolean
   url='http://localhost:8080/educacion';
 
   constructor(private http: HttpClient) { }
@@ -25,4 +25,5 @@ export class EducacionService {
   public deleteEdu(id: number): Observable<any>{
     return this.http.delete<any>(this.url + `deletedatosEdu/${id}`);
   }
+  
 }

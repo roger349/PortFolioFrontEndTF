@@ -11,21 +11,22 @@ import { LoginService } from 'src/app/servicios/login.services';
 })
 export class HsskillsComponent implements OnInit{
 
-  tecno: Tecnologias[] = [];
+tecno: Tecnologias[] = [];
+mostrar:boolean=false;
 
-  constructor(private router:Router ,private Tec: TecnologiasService ,private loginServ: LoginService){}
+constructor(private router:Router ,private Tec: TecnologiasService ,private loginServ: LoginService){}
 
-  ngOnInit(): void {
+ngOnInit(): void {
     this.Tec.TecList().subscribe(tec => { this.tecno=tec;
       console.log(tec);} )         
-  }
-  public visualizarBotones():boolean {
-    return this.loginServ.Habilitarlogueo();
- }
-public botonAgregar() {
+}
+public botonEdiccion() {
   this.router.navigate(['agregarhys']);
 }
-public botonActualizar() {
+public botonEliminar() {
   this.router.navigate(['actualizarhys/:id']);
 }
+mostrarB() {
+  return this.loginServ.habilitarBotones();  
+ }
 }
