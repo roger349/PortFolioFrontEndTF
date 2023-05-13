@@ -16,16 +16,15 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './Componentes/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AgregarExpComponent } from './Componentes/experiencia/agregar-exp.component';
-import { ActualizarExpComponent } from './Componentes/experiencia/actualizar-exp.component';
 import { EliminarExpComponent } from './Componentes/experiencia/eliminar-exp.component'
 import { ActualizarHsskillsComponent } from './Componentes/hsskills/actualizar-hsskills.component';
 import { AgregarHsskillsComponent } from './Componentes/hsskills/agregar-hsskills.component';
 import { AgregarProyectosComponent } from './Componentes/proyectos/agregar-proyectos.component';
 import { ActualizarProyectosComponent } from './Componentes/proyectos/actualizar-proyectos.component';
-import { ActualizarEducacionComponent } from './Componentes/educacion/actualizar-educacion.component';
-import { AgregarEducacionComponent } from './Componentes/educacion/agregar-educacion.component';
+import { EdiccionEducacionComponent } from './Componentes/educacion/ediccion-educacion.component';
 import { EliminarProyectosComponent } from './Componentes/proyectos/eliminar-proyectos.component';
+import { EliminarEducacionComponent } from './Componentes/educacion/eliminar-educacion.component';
+import { EdiccionExpComponent } from './Componentes/experiencia/ediccion-exp.component';
 
  @NgModule({
   declarations: [
@@ -41,16 +40,15 @@ import { EliminarProyectosComponent } from './Componentes/proyectos/eliminar-pro
     HomeComponent,
     LogosApRedesSocialesLoginComponent,
     FooterComponent,
-    AgregarExpComponent,
-    ActualizarExpComponent,
     EliminarExpComponent,
     ActualizarHsskillsComponent,
     AgregarHsskillsComponent,
     AgregarProyectosComponent,
     ActualizarProyectosComponent,
-    ActualizarEducacionComponent,
-    AgregarEducacionComponent,
-    EliminarProyectosComponent
+    EdiccionEducacionComponent,
+    EliminarProyectosComponent,
+    EliminarEducacionComponent,
+    EdiccionExpComponent
   ],
 
   imports: [

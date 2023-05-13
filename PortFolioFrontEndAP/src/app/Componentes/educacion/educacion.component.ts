@@ -22,12 +22,15 @@ export class EducacionComponent implements OnInit {
   console.log(edu);} )        
   }
 public botonEdiccion() {
-  this.router.navigate(['agregarEdu']);
+  this.router.navigate(['ediccionEdu']);
 }
 public botonEliminar() {
-this.router.navigate(['actualizarEdu/:id']);
+this.router.navigate(['eliminarEdu/:id']);
 }
 mostrarB() {
  return this.loginServ.habilitarBotones();  
+}
+public regresarPrincipal() {
+  this.router.navigate(['']);
 }
 }

@@ -22,7 +22,7 @@ ngOnInit(): void {
       console.log(exp);} )  
 }
 public botonEdiccion() {
-     this.router.navigate(['agregarExp']);
+     this.router.navigate(['ediccionExp']);
 }
 public botonEliminar() {
   this.router.navigate(['eliminarExp/:id']);
