@@ -10,9 +10,9 @@ import { ExperienciaLaboralServService } from 'src/app/servicios/ExperienciaLabo
 })
 export class EdiccionExpComponent implements OnInit {
 
-ExpLa!: ExperienciaLaboral;
-
-constructor(private router:Router, private explServ:ExperienciaLaboralServService,  private activatedRouter: ActivatedRoute) { }
+id!:number;
+exper: ExperienciaLaboral = new ExperienciaLaboral("","","","");
+constructor(private router:Router, private expServ:ExperienciaLaboralServService,  private activatedRouter: ActivatedRoute) { }
 
 ngOnInit(): void {
   
@@ -21,8 +21,7 @@ public regresarPrincipal() {
     this.router.navigate(['']);
 }
 actualizarExp(): void {
-      const id = this.activatedRouter.snapshot.params['id'];
-      this.explServ.actualizarExp(id,this.ExpLa).subscribe(data => {
-           alert("Experiencia modificada")});
-    }  
+  this.expServ.actualizarExp(this.id,this.exper).subscribe( data => {
+      alert("Educacion modificada")});
+ }  
 }

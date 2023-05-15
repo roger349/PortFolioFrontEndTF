@@ -1,9 +1,12 @@
-><div class="container eliminarproy">
-    <div>
-     <label for="EliminarProy">Ingrese el Id del Proyecto a Eliminar</label>
-     <input formControlName="proyET" type="proyET" id="EliminarProy" class="form-control" required/>
-     </div>
-     <div>
-     <br>    
-     <button type="submit" class="btn btn-success"(click)="regresarPrincipal()">Eliminar</button>
-</div> 
+<div class="container eliminarproy">
+    <form  #formhys="ngForm">  
+        <div class="form-group">
+        <label for="idproy">Ingrese Id proyecto para Eliminar</label>
+        <input name="id" type="number" id="id" class="form-control" [(ngModel)]="id"required/>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-none"(click)="eliminarproy()"><img src="../../../assets/eliminar2.png" height="30px" widht="30px"/></button>
+        <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+        <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProyectosService } from 'src/app/servicios/Proyectos.service';
 
 @Component({
   selector: 'app-eliminar-proyectos',
@@ -8,11 +9,19 @@ import { Router } from '@angular/router';
 })
 export class EliminarProyectosComponent implements OnInit {
 
-constructor(private router: Router) { }
 
-ngOnInit(): void {
+  id!:number; 
+
+  constructor(private router:Router, private proyServ:ProyectosService) { }
+  
+  ngOnInit(): void {
   }
-public regresarPrincipal() {
-   this.router.navigate(['']);
+  public regresarPrincipal() {
+    this.router.navigate(['']);
   } 
-}
+  eliminarproy(){
+    this.proyServ.deleteProy(this.id).subscribe(data => { 
+       alert("Tecnologia Eliminada")});
+    }
+  
+  }

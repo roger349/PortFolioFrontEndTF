@@ -16,11 +16,11 @@ export class TecnologiasService {
     return this.http.get<Tecnologias[]>(this.url+'/verdatosTec');
   }
 
-  public agregarDatosTec(tec: Tecnologias): Observable<any>{
+  public agregarTec(tec: Tecnologias): Observable<any>{
     return this.http.post<any>(this.url + '/agregardatosTec', tec);
   }
 
-  public updatedatosTec(id: number, tec: Tecnologias): Observable<any>{
+  public actualizarTec(id: number, tec: Tecnologias): Observable<any>{
     return this.http.put<any>(this.url + `/updatedatosTec/${id}`, tec);
   }
 

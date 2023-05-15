@@ -21,10 +21,10 @@ ngOnInit(): void {
       console.log(tec);} )         
 }
 public botonAgregar() {
-  this.router.navigate(['agregarExp']);
+  this.router.navigate(['agregarhys']);
 }
 public botonEdiccion() {
-  this.router.navigate(['ediccionhys']);
+  this.router.navigate(['ediccionhys/:id']);
 }
 public botonEliminar() {
   this.router.navigate(['eliminarhys/:id']);

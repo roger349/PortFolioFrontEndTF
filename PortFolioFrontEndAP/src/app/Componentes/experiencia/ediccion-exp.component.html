@@ -1,25 +1,24 @@
-
 <div class="container ediccionExp">
-   <form novalidate #formEd="ngForm" > 
-     <!-- <div class="form-group">
-        <label for="id_experiencia">Id Experiencia</label>[(ngModel)]="DatosLogin.usuario"
-        <input name="id_experencia" type="id_experiencia" id="id_experiencia" class="form-control" [(ngModel)]="ExpLa.id_experiencia"/>
-      </div>   -->
+   <form novalidate #formEd="ngForm" >
+    <div class="form-group">
+      <label for="idExp">Id Experiencia Laboral</label>
+      <input name="id" type="number" id="id" class="form-control" [(ngModel)]="id" required/>
+    </div>  
       <div class="form-group">
         <label for="nombre_empresa">Nombre Empresa</label>
-        <input name="nombre_empresa" type="text" id="nombre_empresa" class="form-control" [(ngModel)]="ExpLa.nombre_empresa" required/>
+        <input name="nombre_empresa" type="text" id="nombre_empresa" class="form-control" [(ngModel)]="exper.nombre_empresa"/>
       </div>
       <div class="form-group">
         <label for="fecha_inicio">Fecha Inicio</label>
-        <input name="fecha_inicio" type="text" id="fecha_inicio" class="form-control"[(ngModel)]="ExpLa.fecha_inicio" required/>
+        <input name="fecha_inicio" type="text" id="fecha_inicio" class="form-control"[(ngModel)]="exper.fecha_inicio"/>
       </div>
       <div class="form-group">
         <label for="fecha_fin">Fecha Fin</label>
-        <input name="fecha_fin" type="text" id="fecha_fin" class="form-control"[(ngModel)]="ExpLa.fecha_fin" required/>
+        <input name="fecha_fin" type="text" id="fecha_fin" class="form-control"[(ngModel)]="exper.fecha_fin"/>
       </div>
       <div class="form-group">
         <label for="descripcion_puesto">Descripcion Puesta</label>
-        <input name="descripcion_puesto" type="text" id="descripcion_puesto" class="form-control"[(ngModel)]=" ExpLa.descripcion_puesto" required/>
+        <input name="descripcion_puesto" type="text" id="descripcion_puesto" class="form-control"[(ngModel)]=" exper.descripcion_puesto"/>
       </div>
       <br>    
       <button type="submit" class="btn btn-none"(click)="actualizarExp()"><img src="../../../assets/actualizar.png" height="30px" widht="30px" /></button>

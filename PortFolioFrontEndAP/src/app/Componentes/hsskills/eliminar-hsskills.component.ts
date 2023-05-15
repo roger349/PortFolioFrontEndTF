@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TecnologiasService } from 'src/app/servicios/Tecnologias.service';
 
 @Component({
   selector: 'app-eliminar-hsskills',
@@ -8,11 +9,18 @@ import { Router } from '@angular/router';
 })
 export class EliminarHsskillsComponent implements OnInit {
 
-constructor(private router:Router) { }
+  id!:number; 
 
-ngOnInit(): void {
-}
-public regresarPrincipal() {
-  this.router.navigate(['']);
-} 
-}
+  constructor(private router:Router, private tecServ:TecnologiasService) { }
+  
+  ngOnInit(): void {
+  }
+  public regresarPrincipal() {
+    this.router.navigate(['']);
+  } 
+  eliminarTec(){
+    this.tecServ.deleteTec(this.id).subscribe(data => { 
+       alert("Tecnologia Eliminada")});
+    }
+  
+  }

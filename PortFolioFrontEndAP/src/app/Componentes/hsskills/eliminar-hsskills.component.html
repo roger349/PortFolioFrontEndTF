@@ -1,9 +1,12 @@
- <div class="container eliminarhys">
-      <div>
-      <label class="form-label" for="idtecE">Ingrese Id Tecnologia para Eliminar </label>
-      <br>
-      <input formControlName="IdtecE" type="IdtecE" id="idtecE" class="form-control"/>
-      </div>
-      <br>
-      <button type="submit" class="btn btn-success btn-block mb-4"(click)="regresarPrincipal()">Eliminar</button>
-  </div>
+<div class="container eliminarhys">
+    <form  #formhys="ngForm">  
+        <div class="form-group">
+        <label for="idTec">Ingrese Id Tecnologia para Eliminar</label>
+        <input name="id" type="number" id="id" class="form-control" [(ngModel)]="id"required/>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-none"(click)="eliminarTec()"><img src="../../../assets/eliminar2.png" height="30px" widht="30px"/></button>
+        <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+        <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>
+</div>

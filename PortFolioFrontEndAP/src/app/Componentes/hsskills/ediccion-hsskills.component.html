@@ -1,20 +1,21 @@
 
 <div class="container ediccionhys">
-    <div>
-        <label for="hysI">Id Tecnologia</label>
-        <input formControlName="hys" type="hys" id="hysI" class="form-control" placeholder="ingresar Id solo para actualizar" required/>
-    </div>
-    <div>
-        <label for="editec">Nombre Tecnologia</label>
-        <input formControlName="tec" type="tec" id="ediTec" class="form-control" required/>
-    </div>
-    <div>
-        <label for="porcntajeTec">Porcentaje Tecnologia</label>
-        <input formControlName="tecP" type="tecP" id="porcntajeTec" class="form-control"required/>
-    </div>
-    <br>    
-    <button type="submit" class="btn btn-none"><img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
-    <button type="submit" class="btn btn-none"><img src="../../../assets/actualizar.png" height="30px" widht="30px" /></button>
-    <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
-      <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
-</div>
+    <form novalidate #formEd="ngForm" >
+      <div class="form-group">
+        <label for="idhys">Id Tecnologia</label>
+        <input name="id" type="number" id="id" class="form-control" [(ngModel)]="id" required/>
+      </div> 
+         <div class="form-group">
+         <label for="nombre_tecnologia">Nombre Tecnologia</label>
+         <input name="nombre_tecnologia" type="text" id="nombre_tecnologia" class="form-control" [(ngModel)]="tec.nombre_tecnologia"/>
+       </div>
+       <div class="form-group">
+         <label for="porcentaje_tecnologia">Porcentaje Tecnologia</label>
+         <input name="porcentaje_tecnologia" type="number" id="porcentaje_tecnologia" class="form-control"[(ngModel)]="tec.porcentaje_tecnologia"/>
+       </div>
+       <br>    
+       <button type="submit" class="btn btn-none"(click)="actualizarhys()"><img src="../../../assets/actualizar.png" height="30px" widht="30px" /></button>
+       <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+       <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>
+ </div>

@@ -1,19 +1,20 @@
 <div class="container ediccionproy">
-    <div>
-        <label for="proy">Id Proyecto</label>
-        <input formControlName="proyI" type="proyI" id="proy" class="form-control" required/>
-    </div>
-    <div>
-        <label for="proyT">Tipo de Proyecto</label>
-        <input formControlName="proyi" type="proyi" id="proyI" class="form-control" required/>
-    </div>
-    <div>
-        <label for="fechaInicio">Descripcion breve del Proyecto</label>
-        <input formControlName="fechai" type="fechai" id="fechaInicio" class="form-control"required/>
-    </div>
-    <br>    
-    <button type="submit" class="btn btn-none"><img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
-    <button type="submit" class="btn btn-none"><img src="../../../assets/actualizar.png" height="30px" widht="30px" /></button>
-    <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
-      <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
-</div>
+    <form novalidate #formproy="ngForm" >
+      <div class="form-group">
+        <label for="idpro">Id Proyecto</label>
+        <input name="id" type="number" id="id" class="form-control" [(ngModel)]="id" required/>
+      </div> 
+       <div class="form-group">
+         <label for="tipo proyecto">Tipo Proyecto</label>
+         <input name="tipo_proyecto" type="text" id="tipo_proyecto" class="form-control" [(ngModel)]="pro.tipo_proyecto"/>
+       </div>
+       <div class="form-group">
+         <label for="descripcion proyecto">Descripcion Proyecto</label>
+         <input name="descripcion_proyecto" type="text" id="descripcion_proyecto" class="form-control"[(ngModel)]="pro.descripcion_proyecto"/>
+       </div>
+       <br>    
+       <button type="submit" class="btn btn-none" (click)="actualizarproy()"><img src="../../../assets/actualizar.png" height="30px" widht="30px" /></button>
+       <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+       <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>
+ </div>

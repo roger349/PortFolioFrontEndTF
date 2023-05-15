@@ -1,0 +1,17 @@
+
+<div class="container agregarhys">
+    <form novalidate #formhys="ngForm" > 
+       <div class="form-group">
+         <label for="nombre_tecnologia">Nombre Tecnologia</label>
+         <input name="nombre_tecnologia" type="text" id="nombre_tecnologia" class="form-control" [(ngModel)]="nombre_tecnologia" required/>
+       </div>
+       <div class="form-group">
+         <label for="¨porcentaje_tecnologia">Procentaje Tecnologia</label>
+         <input name="porcentaje_tecnologia" type="number" id="porcentaje_tecnologia" class="form-control"[(ngModel)]="porcentaje_tecnologia" required/>
+       </div>
+       <br>    
+       <button type="submit" class="btn btn-none" (click)="addTec()"><img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
+       <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+       <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>
+ </div>

@@ -20,16 +20,13 @@ ngOnInit(): void {
     this.ProyServ.ProList().subscribe(pro=>{this.proy=pro});
   }
 public botonAgregar() {
-    this.router.navigate(['agregarExp']);
+    this.router.navigate(['agregarproy']);
   } 
 public botonEdiccion() {
-  this.router.navigate(['ediccionProy']);
+  this.router.navigate(['ediccionproy/:id']);
 }
 public botonEliminar() {
-  this.router.navigate(['eliminarProy/:id']);
-}
-public botonActualizar() {
-  this.router.navigate(['actualizarProy/:id']);
+  this.router.navigate(['eliminarproy/:id']);
 }
 mostrarB() {
   return this.loginServ.habilitarBotones();  

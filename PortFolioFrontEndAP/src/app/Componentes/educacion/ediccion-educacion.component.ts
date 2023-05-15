@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {  Router } from '@angular/router';
+import { Educacion } from 'src/app/modelos/Educacion.model';
+import { EducacionService } from 'src/app/servicios/Educacion.service';
+
 
 @Component({
   selector: 'app-ediccion-educacion',
@@ -8,11 +11,20 @@ import { Router } from '@angular/router';
 })
 export class EdiccionEducacionComponent implements OnInit {
 
-  constructor(private router:Router) { }
+/*educa: Educacion=;*/
+id!:number;
+educa: Educacion = new Educacion("","","");
+constructor(private router:Router, private eduServ: EducacionService) { }
 
-  ngOnInit(): void {
+ngOnInit(): void {
+  
   }
 public regresarPrincipal() {
-    this.router.navigate(['']);
-} 
+this.router.navigate(['']);
+}
+
+actualizarEdu(): void {
+  this.eduServ.actualizarEdu(this.id,this.educa).subscribe( data => {
+      alert("Educacion modificada")});
+ } 
 }

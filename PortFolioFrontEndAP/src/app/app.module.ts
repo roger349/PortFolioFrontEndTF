@@ -26,6 +26,8 @@ import { EdiccionHsskillsComponent } from './Componentes/hsskills/ediccion-hsski
 import { EdiccionProyectosComponent } from './Componentes/proyectos/ediccion-proyectos.component';
 import { AgregarexperienciaComponent } from './Componentes/experiencia/agregarexperiencia.component';
 import { AgregareducacionComponent } from './Componentes/educacion/agregareducacion.component';
+import { AgregarhysComponent } from './Componentes/hsskills/agregarhys.component';
+import { AgregarproyComponent } from './Componentes/proyectos/agregarproy.component';
 
  @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { AgregareducacionComponent } from './Componentes/educacion/agregareducac
     EdiccionHsskillsComponent,
     EdiccionProyectosComponent,
     AgregarexperienciaComponent,
-    AgregareducacionComponent
+    AgregareducacionComponent,
+    AgregarhysComponent,
+    AgregarproyComponent
   ],
 
   imports: [

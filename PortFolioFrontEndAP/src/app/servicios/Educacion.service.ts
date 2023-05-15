@@ -19,7 +19,7 @@ export class EducacionService {
     return this.http.post<Educacion>(this.url + '/agregardatosEdu', educ);
   }
 
-  public updateEdu(id: number, educ: Educacion): Observable<Educacion>{
+  public actualizarEdu(id: number, educ: Educacion): Observable<Educacion>{
     return this.http.put<Educacion>(this.url + `/updatedatosEdu/${id}`, educ);
   }
   public deleteEdu(id: number): Observable<any>{

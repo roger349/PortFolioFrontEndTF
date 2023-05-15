@@ -21,13 +21,13 @@ ngOnInit(): void {
       console.log(exp)} )  
 }
 public botonEdiccion() {
-     this.router.navigate(['ediccionExp']);
+     this.router.navigate(['ediccionexp/:id']);
 }
 public botonAgregar() {
-  this.router.navigate(['agregarExp']);
+  this.router.navigate(['agregarexp']);
 }
 public botonEliminar() {
-  this.router.navigate(['eliminarExp/:id']);
+  this.router.navigate(['eliminarexp/:id']);
 }
 mostrarB() {
   return this.loginServ.habilitarBotones();  

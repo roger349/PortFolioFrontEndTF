@@ -12,21 +12,25 @@ import { EliminarHsskillsComponent } from './Componentes/hsskills/eliminar-hsski
 import { EdiccionProyectosComponent } from './Componentes/proyectos/ediccion-proyectos.component';
 import { AgregarexperienciaComponent } from './Componentes/experiencia/agregarexperiencia.component';
 import { AgregareducacionComponent } from './Componentes/educacion/agregareducacion.component';
+import { AgregarhysComponent } from './Componentes/hsskills/agregarhys.component';
+import { AgregarproyComponent } from './Componentes/proyectos/agregarproy.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path:'home', component:HomeComponent },
   {path: 'loginuser', component: LoginuserComponent},
-  { path: 'ediccionExp', component: EdiccionExpComponent},
-  { path: 'eliminarExp/:id', component: EliminarExpComponent},
-  { path: 'agregarExp', component: AgregarexperienciaComponent},
-  { path: 'ediccionEdu', component: EdiccionEducacionComponent},
-  { path: 'agregarEdu', component: AgregareducacionComponent},
-  { path: 'eliminarEdu/:id', component: EliminarEducacionComponent},
-  { path: 'ediccionhys', component: EdiccionHsskillsComponent},
+  { path: 'ediccionexp/:id', component: EdiccionExpComponent},
+  { path: 'eliminarexp/:id', component: EliminarExpComponent},
+  { path: 'agregarexp', component: AgregarexperienciaComponent},
+  { path: 'ediccionedu/:id', component: EdiccionEducacionComponent},
+  { path: 'agregaredu', component: AgregareducacionComponent},
+  { path: 'eliminaredu/:id', component: EliminarEducacionComponent},
+  { path: 'ediccionhys/:id', component: EdiccionHsskillsComponent},
   { path: 'eliminarhys/:id', component: EliminarHsskillsComponent},
-  { path: 'ediccionProy', component: EdiccionProyectosComponent},
-  { path: 'eliminarProy/:id', component: EliminarProyectosComponent}
+  { path: 'agregarhys', component: AgregarhysComponent},
+  { path: 'ediccionproy/:id', component: EdiccionProyectosComponent},
+  { path: 'agregarproy', component: AgregarproyComponent},
+  { path: 'eliminarproy/:id', component: EliminarProyectosComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,16 @@
+<div class="container agregarproy">
+    <form novalidate #formproy="ngForm" > 
+       <div class="form-group">
+         <label for="tipo proyecto">Tipo Proyecto</label>
+         <input name="tipo_proyecto" type="text" id="tipo_proyecto" class="form-control" [(ngModel)]="tipo_proyecto" required/>
+       </div>
+       <div class="form-group">
+         <label for="descripcion proyecto">Descripcion Proyecto</label>
+         <input name="descripcion_proyecto" type="text" id="descripcion_proyecto" class="form-control"[(ngModel)]="descripcion_proyecto" required/>
+       </div>
+       <br>    
+       <button type="submit" class="btn btn-none" (click)="addproy()"><img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
+       <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+       <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>
+ </div>
