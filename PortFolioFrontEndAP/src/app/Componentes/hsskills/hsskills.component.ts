@@ -20,11 +20,14 @@ ngOnInit(): void {
     this.Tec.TecList().subscribe(tec => { this.tecno=tec;
       console.log(tec);} )         
 }
+public botonAgregar() {
+  this.router.navigate(['agregarExp']);
+}
 public botonEdiccion() {
-  this.router.navigate(['agregarhys']);
+  this.router.navigate(['ediccionhys']);
 }
 public botonEliminar() {
-  this.router.navigate(['actualizarhys/:id']);
+  this.router.navigate(['eliminarhys/:id']);
 }
 mostrarB() {
   return this.loginServ.habilitarBotones();  

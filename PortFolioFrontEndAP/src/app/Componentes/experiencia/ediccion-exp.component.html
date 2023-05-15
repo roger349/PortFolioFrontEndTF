@@ -1,24 +1,29 @@
 
 <div class="container ediccionExp">
-    <div>
-        <label for="Agregarexp">Id Experiencia</label>
-        <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" required/>
-    </div>
-    <div>
-        <label for="Agregarexp">Nombre Empresa</label>
-        <input formControlName="Exp" type="Exp" id="Agregarexp" class="form-control" required/>
-    </div>
-    <div>
-        <label for="fechaInicio">Fecha Inicio</label>
-        <input formControlName="fechai" type="fechai" id="fechaInicio" class="form-control"required/>
-    </div>
-    <div>
-        <label for="fechaFin">Fecha Fin</label>
-        <input formControlName="fechaf" type="fechaf" id="fechaFin" class="form-control"required/>
-    </div>
-    <br>    
-    <button type="submit" class="btn btn-none"><img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
-    <button type="submit" class="btn btn-none"><img src="../../../assets/actualizar.png" height="30px" widht="30px" /></button>
-    <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+   <form novalidate #formEd="ngForm" > 
+     <!-- <div class="form-group">
+        <label for="id_experiencia">Id Experiencia</label>[(ngModel)]="DatosLogin.usuario"
+        <input name="id_experencia" type="id_experiencia" id="id_experiencia" class="form-control" [(ngModel)]="ExpLa.id_experiencia"/>
+      </div>   -->
+      <div class="form-group">
+        <label for="nombre_empresa">Nombre Empresa</label>
+        <input name="nombre_empresa" type="text" id="nombre_empresa" class="form-control" [(ngModel)]="ExpLa.nombre_empresa" required/>
+      </div>
+      <div class="form-group">
+        <label for="fecha_inicio">Fecha Inicio</label>
+        <input name="fecha_inicio" type="text" id="fecha_inicio" class="form-control"[(ngModel)]="ExpLa.fecha_inicio" required/>
+      </div>
+      <div class="form-group">
+        <label for="fecha_fin">Fecha Fin</label>
+        <input name="fecha_fin" type="text" id="fecha_fin" class="form-control"[(ngModel)]="ExpLa.fecha_fin" required/>
+      </div>
+      <div class="form-group">
+        <label for="descripcion_puesto">Descripcion Puesta</label>
+        <input name="descripcion_puesto" type="text" id="descripcion_puesto" class="form-control"[(ngModel)]=" ExpLa.descripcion_puesto" required/>
+      </div>
+      <br>    
+      <button type="submit" class="btn btn-none"(click)="actualizarExp()"><img src="../../../assets/actualizar.png" height="30px" widht="30px" /></button>
+      <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
       <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+   </form>
 </div>

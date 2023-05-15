@@ -4,18 +4,22 @@
         <div class="col-1" style="padding-left:2%">
         <img src="../../../assets/proyecto.jpg"   width= "140%" height="100%" float="inline-start">
         </div>
-        <div class="col-9">
+        <div class="col-8">
         <div *ngFor="let pro of proy">
         <br> 
         <h1>Tipo Proyecto: {{pro.tipo_proyecto}},  Descripcion: {{pro.descripcion_proyecto}}</h1>
         </div>    
         </div>
+            <div *ngIf="mostrarB()"  class="col-1">
+            <button  type="submit" class="btn btn-none" (click)="botonAgregar()">
+            <img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
+            </div>
             <div *ngIf="mostrarB()" class="col-1">
-            <button type="submit" class="btn" (click)="botonAgregar()">
+            <button type="submit" class="btn" (click)="botonEdiccion()">
             <img src="../../../assets/ediccion.png" height="20px" widht="20px"/></button>
             </div>
             <div *ngIf="mostrarB()" class="col-1">
-            <button type="submit" class="btn" (click)="botonActualizar()">
+            <button type="submit" class="btn" (click)="botonEliminar()">
             <img src="../../../assets/eliminar.png" height="30px" widht="30px" /></button>
             </div> 
     </div>

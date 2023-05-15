@@ -4,20 +4,23 @@
           <div class="col-1" style="padding-left:2%">
           <img src="../../../assets/team.jpg"  width="140%"  height="100%"  float="inline-start"/>
           </div>
-          <div class="col-9">
+          <div class="col-8">
               <div *ngFor="let exp of exper">
               <br> 
-              <h1>Empresa: {{exp.nombre_empresa}}, Fecha Inicio: {{exp.fecha_inicio}}, Fecha Fin: {{exp.fecha_fin}}, 
-               Descripcion Puesto: {{exp.descripcion_puesto}}</h1>
+              <h1>Empresa: {{exp.nombre_empresa}}, Fecha Inicio: {{exp.fecha_inicio}}, Fecha Fin: {{exp.fecha_fin}},Descripcion Puesto: {{exp.descripcion_puesto}}</h1>
               </div>      
+          </div>
+          <div *ngIf="mostrarB()"  class="col-1">
+          <button  type="submit" class="btn btn-none" (click)="botonAgregar()">
+          <img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
           </div>
           <div *ngIf="mostrarB()" class="col-1">
           <button type="submit" class="btn" (click)="botonEdiccion()">
-          <img src="../../../assets/ediccion.png" height="20px" widht="20px" opacity=".5" /></button>
+          <img src="../../../assets/ediccion.png" height="20px" widht="20px" /></button>
           </div>
           <div *ngIf="mostrarB()" class="col-1">
           <button type="submit" class="btn btn-none" (click)="botonEliminar()">
-          <img src="../../../assets/eliminar.png" height="30px" widht="30px" opacity=".1" /></button>
+          <img src="../../../assets/eliminar.png" height="30px" widht="30px"/></button>
           </div>
        </div>
 </div>

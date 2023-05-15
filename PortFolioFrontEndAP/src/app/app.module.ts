@@ -17,14 +17,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './Componentes/footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EliminarExpComponent } from './Componentes/experiencia/eliminar-exp.component'
-import { ActualizarHsskillsComponent } from './Componentes/hsskills/actualizar-hsskills.component';
-import { AgregarHsskillsComponent } from './Componentes/hsskills/agregar-hsskills.component';
-import { AgregarProyectosComponent } from './Componentes/proyectos/agregar-proyectos.component';
-import { ActualizarProyectosComponent } from './Componentes/proyectos/actualizar-proyectos.component';
 import { EdiccionEducacionComponent } from './Componentes/educacion/ediccion-educacion.component';
 import { EliminarProyectosComponent } from './Componentes/proyectos/eliminar-proyectos.component';
 import { EliminarEducacionComponent } from './Componentes/educacion/eliminar-educacion.component';
 import { EdiccionExpComponent } from './Componentes/experiencia/ediccion-exp.component';
+import { EliminarHsskillsComponent } from './Componentes/hsskills/eliminar-hsskills.component';
+import { EdiccionHsskillsComponent } from './Componentes/hsskills/ediccion-hsskills.component';
+import { EdiccionProyectosComponent } from './Componentes/proyectos/ediccion-proyectos.component';
+import { AgregarexperienciaComponent } from './Componentes/experiencia/agregarexperiencia.component';
+import { AgregareducacionComponent } from './Componentes/educacion/agregareducacion.component';
 
  @NgModule({
   declarations: [
@@ -41,14 +42,15 @@ import { EdiccionExpComponent } from './Componentes/experiencia/ediccion-exp.com
     LogosApRedesSocialesLoginComponent,
     FooterComponent,
     EliminarExpComponent,
-    ActualizarHsskillsComponent,
-    AgregarHsskillsComponent,
-    AgregarProyectosComponent,
-    ActualizarProyectosComponent,
     EdiccionEducacionComponent,
     EliminarProyectosComponent,
     EliminarEducacionComponent,
-    EdiccionExpComponent
+    EdiccionExpComponent,
+    EliminarHsskillsComponent,
+    EdiccionHsskillsComponent,
+    EdiccionProyectosComponent,
+    AgregarexperienciaComponent,
+    AgregareducacionComponent
   ],
 
   imports: [

@@ -1,0 +1,20 @@
+<div class="container agregarEdu">
+    <form novalidate #formEdu="ngForm" > 
+       <div class="form-group">
+         <label for="titulo">Titulo</label>
+         <input name="titulo" type="text" id="titulo" class="form-control" [(ngModel)]="titulo" required/>
+       </div>
+       <div class="form-group">
+         <label for="condicion">Condicion</label>
+         <input name="condicion" type="text" id="condicion" class="form-control"[(ngModel)]="condicion" required/>
+       </div>
+       <div class="form-group">
+         <label for="institucion">Insttitucion</label>
+         <input name="institucion" type="text" id="institucion" class="form-control"[(ngModel)]="institucion" required/>
+       </div>
+       <br>    
+       <button type="submit" class="btn btn-none" (click)="addEdu()"><img src="../../../assets/agregar.png" height="30px" widht="30px" /></button>
+       <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+       <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>
+ </div>

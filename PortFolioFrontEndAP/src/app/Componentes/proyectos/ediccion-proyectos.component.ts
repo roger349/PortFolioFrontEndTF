@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-agregar-hsskills',
-  templateUrl: './agregar-hsskills.component.html',
-  styleUrls: ['./agregar-hsskills.component.css']
+  selector: 'app-ediccion-proyectos',
+  templateUrl: './ediccion-proyectos.component.html',
+  styleUrls: ['./ediccion-proyectos.component.css']
 })
-export class AgregarHsskillsComponent implements OnInit {
+export class EdiccionProyectosComponent implements OnInit {
 
   constructor(private router:Router) { }
 
@@ -14,5 +14,5 @@ export class AgregarHsskillsComponent implements OnInit {
   }
   public regresarPrincipal() {
     this.router.navigate(['']);
-  } 
+}
 }

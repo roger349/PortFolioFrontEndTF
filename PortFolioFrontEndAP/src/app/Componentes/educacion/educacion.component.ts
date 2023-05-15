@@ -21,6 +21,9 @@ export class EducacionComponent implements OnInit {
   this.eduservice.EduList().subscribe(edu => { this.educ=edu;
   console.log(edu);} )        
   }
+public botonAgregar() {
+    this.router.navigate(['agregarEdu']);
+  }  
 public botonEdiccion() {
   this.router.navigate(['ediccionEdu']);
 }

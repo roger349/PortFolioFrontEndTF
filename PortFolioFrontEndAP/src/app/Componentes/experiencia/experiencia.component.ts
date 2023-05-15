@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ExperienciaLaboral } from 'src/app/modelos/ExperienciaLaboral.model';
 import { ExperienciaLaboralServService } from 'src/app/servicios/ExperienciaLaboralServ.service';
@@ -19,10 +18,13 @@ constructor(private router:Router ,private ELServ : ExperienciaLaboralServServic
   
 ngOnInit(): void {
   this.ELServ.ExpList().subscribe(exp => { this.exper=exp;
-      console.log(exp);} )  
+      console.log(exp)} )  
 }
 public botonEdiccion() {
      this.router.navigate(['ediccionExp']);
+}
+public botonAgregar() {
+  this.router.navigate(['agregarExp']);
 }
 public botonEliminar() {
   this.router.navigate(['eliminarExp/:id']);

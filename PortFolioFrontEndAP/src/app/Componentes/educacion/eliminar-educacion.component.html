@@ -1,9 +1,12 @@
 <div class="container eliminarEdu">
-    <div>
-    <label class="form-label" for="idExp">Ingrese Id para Eliminar Educacion</label>
-    <br>
-    <input formControlName="IdExp" type="IdExp" id="idExp" class="form-control"/>
-    </div>
-    <br>
-    <button type="submit" class="btn btn-success btn-block mb-4"(click)="regresarPrincipal()">Eliminar</button>
+    <form #formEliE="ngForm">
+       <div class="form-group">
+       <label for="idExp">Ingrese Id Educacion para Eliminar</label>
+       <input name="id" type="number" id="id" class="form-control"[(ngModel)]="id" required/>
+       </div>
+       <br>
+       <button type="submit" class="btn btn-none"(click)="eliminarEdu()"><img src="../../../assets/eliminar2.png" height="30px" widht="30px"/></button>
+       <button type="submit" class="btn btn-none"(click)="regresarPrincipal()">
+       <img src="../../../assets/aceptar.png" height="30px" widht="30px" /></button>
+    </form>   
 </div>

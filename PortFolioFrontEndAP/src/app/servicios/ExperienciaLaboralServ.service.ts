@@ -15,13 +15,13 @@ export class ExperienciaLaboralServService {
   public ExpList(): Observable<ExperienciaLaboral[]>{
     return this.http.get<ExperienciaLaboral[]>(this.url+'/verdatosExp');         
   }
-  public agregarExt(experiencia: ExperienciaLaboral): Observable<any>{
+  public agregarExp(experiencia: ExperienciaLaboral): Observable<any>{
     return this.http.post<any>(this.url + '/agregardatosExp', experiencia);
   }
-  public actualizarExp(id: number, experiencia: ExperienciaLaboral): Observable<any>{
-    return this.http.put<any>(this.url + `/updatedatosExp/${id}`, experiencia);
+  public actualizarExp(id: number, experienciaL: ExperienciaLaboral): Observable<ExperienciaLaboral>{
+    return this.http.put<ExperienciaLaboral>(this.url + `/updatedatosExp/${id}`, experienciaL);
   }
   public deleteExp(id: number): Observable<any>{
-    return this.http.delete<any>(this.url + `/deletedatosExp/${id}`);
+    return this.http.delete<any>(this.url + `/deleteExperiencia/${id}`);
   }
 }

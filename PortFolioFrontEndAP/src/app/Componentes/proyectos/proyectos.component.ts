@@ -19,9 +19,11 @@ constructor(private router: Router, public ProyServ:ProyectosService,private log
 ngOnInit(): void {
     this.ProyServ.ProList().subscribe(pro=>{this.proy=pro});
   }
-  
 public botonAgregar() {
-  this.router.navigate(['agregarProy']);
+    this.router.navigate(['agregarExp']);
+  } 
+public botonEdiccion() {
+  this.router.navigate(['ediccionProy']);
 }
 public botonEliminar() {
   this.router.navigate(['eliminarProy/:id']);
