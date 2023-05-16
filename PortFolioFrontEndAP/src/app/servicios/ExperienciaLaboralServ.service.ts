@@ -8,7 +8,7 @@ import { ExperienciaLaboral } from '../modelos/ExperienciaLaboral.model';
 })
 export class ExperienciaLaboralServService {
 
-  url= "http://localhost:8080/experiencia"; 
+  url= "http://backendpf.fly.dev/experiencia"; 
   
   constructor(private http : HttpClient) { }
   

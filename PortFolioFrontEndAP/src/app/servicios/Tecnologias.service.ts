@@ -8,7 +8,7 @@ import { Tecnologias } from '../modelos/Tecnologias.model';
 })
 export class TecnologiasService {
 
-  url = 'http://localhost:8080/tecnologia';
+  url = 'http://backendpf.fly.dev/tecnologia';
 
   constructor(private http : HttpClient) { }
 

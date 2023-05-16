@@ -10,8 +10,8 @@ import { UserLogin } from '../modelos/UserLogin.model';
 export class LoginService {
 logget!:boolean;  
 DLogin: UserLogin = new UserLogin()
-/*private url= "http://localhost:8080/userLogin/verdatosUserLogin";*/
-private url1= "http://localhost:8080/userLogin/login";
+
+private url1= "http://backendpf.fly.dev/userLogin/login";
 
 constructor(private router:Router, private http:HttpClient) {}
 

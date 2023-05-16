@@ -10,7 +10,7 @@ import { DatosPersonales } from '../modelos/DatosPersonales.model';
 
 export class DatosPersonalesServService {
 
-  url= 'http://localhost:8080/persona/verdatos';
+  url= 'http://backendpf.fly.dev/persona/verdatos';
   
   constructor(private http:HttpClient) { }
     
