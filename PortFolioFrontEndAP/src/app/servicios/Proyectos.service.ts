@@ -8,7 +8,7 @@ import { Proyectos } from '../modelos/Proyectos.model';
 })
 export class ProyectosService {
 
-  url = 'http://localhost:8080/proyecto';
+  url = 'http://backendpf.fly.dev/proyecto';
 
   constructor(private http : HttpClient) { }
 

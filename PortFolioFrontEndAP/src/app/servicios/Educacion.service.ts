@@ -8,7 +8,7 @@ import { Educacion } from '../modelos/Educacion.model';
 })
 export class EducacionService {
   mostar!:boolean
-  url='http://backendpf.fly.dev /educacion';
+  url='http://backendpf.fly.dev/educacion';
 
   constructor(private http: HttpClient) { }
 
