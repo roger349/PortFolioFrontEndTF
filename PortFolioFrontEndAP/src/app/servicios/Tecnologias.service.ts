@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Tecnologias } from '../modelos/Tecnologias.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TecnologiasService {
 
-  url = 'http://backendpf.fly.dev/tecnologia';
+  url=  environment.URL + 'tecnologia';
 
   constructor(private http : HttpClient) { }
 

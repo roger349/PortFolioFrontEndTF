@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Educacion } from '../modelos/Educacion.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
   mostar!:boolean
-  url='http://backendpf.fly.dev/educacion';
+
+  url=  environment.URL + 'educacion';
 
   constructor(private http: HttpClient) { }
 

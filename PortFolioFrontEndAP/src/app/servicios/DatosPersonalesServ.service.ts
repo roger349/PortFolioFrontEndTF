@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DatosPersonales } from '../modelos/DatosPersonales.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
 
@@ -10,11 +11,12 @@ import { DatosPersonales } from '../modelos/DatosPersonales.model';
 
 export class DatosPersonalesServService {
 
-  url= 'http://backendpf.fly.dev/persona/verdatos';
+
+url = environment.URL + 'persona/verdatos';
   
-  constructor(private http:HttpClient) { }
+constructor(private http:HttpClient) { }
     
-  public DatPer(): Observable<DatosPersonales[]> {
+public DatPer(): Observable<DatosPersonales[]> {
     return this.http.get<DatosPersonales[]>(this.url);
   }   
 }

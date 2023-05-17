@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Proyectos } from '../modelos/Proyectos.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProyectosService {
 
-  url = 'http://backendpf.fly.dev/proyecto';
+  url=  environment.URL + 'proyecto';
 
   constructor(private http : HttpClient) { }
 

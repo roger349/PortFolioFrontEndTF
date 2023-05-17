@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { ExperienciaLaboral } from '../modelos/ExperienciaLaboral.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExperienciaLaboralServService {
-
-  url= "http://backendpf.fly.dev/experiencia"; 
+ 
+  url=  environment.URL + 'experiencia';
   
   constructor(private http : HttpClient) { }
   
